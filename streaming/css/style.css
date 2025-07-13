@@ -1,0 +1,146 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+    text-decoration: none;
+}
+
+body{
+    box-sizing: border-box;
+}
+
+/* Header */
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(48, 214, 74);
+    padding: 10px;
+}
+
+header h1{
+    color: white;  
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+nav a{
+    /* border: 1px solid black; */
+    padding: 5px;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: 0.25s;
+    color: blue;
+}
+
+nav a:hover{
+    background-color: rgba(255, 255, 255, 0.384);
+    text-decoration: underline;
+}
+
+.burger{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+    display: none;
+    cursor: pointer;
+}
+
+.burger span{
+    background-color: black;
+    padding: 1px 10px;
+}
+
+.visible{    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 70px;
+    left: 50%;
+    right: 50%;
+}
+
+/* Connection */
+.connection form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    box-shadow: 6px 5px 0 2px black;
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 3px;
+}
+
+.connection form button{
+    font-size: 16px;
+    padding: 3px 5px;
+    cursor: pointer;
+}
+
+.connection form input{
+    font-size: 17px;
+    padding: 3px;
+    
+}
+
+.connection{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/* Contenue */
+
+.videos-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.videos-container iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: none;
+}
+
+/* Footer */
+footer{
+    background-color: black;
+    padding: 10px;
+}
+
+footer p{
+    color: white;
+    text-align: center;
+}
+
+@media (max-width: 686px) {
+
+    nav{
+        display: none;
+        background-color: rgb(122, 228, 66);
+    }
+
+    nav a{
+        color: white;
+        font-size: 17px;
+    }
+
+    .burger{
+        display: flex;
+    }
+
+}
+
